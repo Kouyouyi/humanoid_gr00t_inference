@@ -70,6 +70,6 @@ python3 scripts/verify_standalone.py --model /你的检查点目录
 
 ## 换机器和 Git
 
-先安装 Git LFS，再拉取包含 LFS 对象的完整仓库：`git lfs pull`。本地资产已经复制并保存于此仓库，不是指向旧项目的符号链接。当前没有配置远程仓库或推送。
+先安装 Git LFS，再拉取包含 LFS 对象的完整仓库：`git lfs pull`。本地资产已经复制并保存于此仓库，不是指向旧项目的符号链接。远程仓库：`git@github.com:Kouyouyi/humanoid_gr00t_inference.git`。
 
 配置说明与系统依赖见 [docs/SETUP.md](docs/SETUP.md)，目录及依赖边界见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。来源和许可见 [NOTICE.md](NOTICE.md)、`licenses/` 与 `provenance/`。
