@@ -1,0 +1,1436 @@
+{
+  "reference_only": true,
+  "hardware_validated": false,
+  "selected_field_limits": null,
+  "repository": "/home/user/GR00T-WholeBodyControl",
+  "git_head": "775580615d3a6e3d2c1cf11a3f5673e0d3c850bc",
+  "sources": {
+    "yaml": {
+      "path": "gear_sonic/utils/mujoco_sim/wbc_configs/g1_29dof_sonic_model12.yaml",
+      "sha256": "28a7fb6b80692b081e880d11662a63fe179c7bb31354c3a98b9dbedc624abfae"
+    },
+    "isaaclab": {
+      "path": "gear_sonic/envs/manager_env/robots/g1.py",
+      "sha256": "42f9b4394eb21512735da4b1ca78c2d0546c4221c7bdaf8b3a186d8dc5588ba9"
+    },
+    "mapping": {
+      "path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/policy_parameters.hpp",
+      "sha256": "b9332adf07c2c9b75c9b1e0756e57c7a1c2a890d8bb0aa53c3f1905fb739b791"
+    },
+    "output": {
+      "path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/include/output_interface/zmq_output_handler.hpp",
+      "sha256": "8f03694d76d109dec0a3c76d46f026fd445108756b0254304511abcd7b3f346e"
+    },
+    "controller": {
+      "path": "gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/g1_deploy_onnx_ref.cpp",
+      "sha256": "adfd1aa8d17ca08be55acd1067ad9f69f9f8377f560c20a8309dcf2eb76f292f"
+    },
+    "xml": {
+      "path": "gear_sonic/data/robot_model/model_data/g1/g1_29dof_with_hand.xml",
+      "sha256": "58c82f77753db54f8a6ca0a8e020e142b015d8587db6cfc442f9a75f2bc444c6"
+    }
+  },
+  "mapping_evidence": [
+    {
+      "source": "mapping",
+      "line": 100
+    },
+    {
+      "source": "output",
+      "line": 360
+    },
+    {
+      "source": "controller",
+      "line": 2925
+    }
+  ],
+  "deployment_speed_check": {
+    "threshold_rad_s": 35,
+    "condition": "body_dq[i] > 35 && !disable_crc_check_",
+    "absolute_value": false,
+    "source": "controller",
+    "line": 2926
+  },
+  "notes": [
+    "YAML effort array includes fingers; joined by XML actuator joint names, never truncated to 29.",
+    "Missing acceleration limits remain null; no field limit is selected automatically.",
+    "Git HEAD alone does not identify local edits; source SHA256 values identify the extracted files."
+  ],
+  "joints": [
+    {
+      "body_dq_index": 0,
+      "hardware_motor_index": 0,
+      "isaaclab_index": 0,
+      "joint": "left_hip_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.5307,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.8798,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 0,
+      "acceleration_rad_s2": null,
+      "differences": [
+        "velocity",
+        "effort"
+      ]
+    },
+    {
+      "body_dq_index": 1,
+      "hardware_motor_index": 1,
+      "isaaclab_index": 3,
+      "joint": "left_hip_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.5236,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.9671,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 1,
+      "acceleration_rad_s2": null,
+      "differences": [
+        "velocity",
+        "effort"
+      ]
+    },
+    {
+      "body_dq_index": 2,
+      "hardware_motor_index": 2,
+      "isaaclab_index": 6,
+      "joint": "left_hip_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.7576,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.7576,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 2,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 3,
+      "hardware_motor_index": 3,
+      "isaaclab_index": 9,
+      "joint": "left_knee_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.087267,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.8798,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 3,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 4,
+      "hardware_motor_index": 4,
+      "isaaclab_index": 13,
+      "joint": "left_ankle_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.87267,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.5236,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 279
+        },
+        "effort_limit_sim": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 278
+        }
+      },
+      "mujoco_xml_actuator_index": 4,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 5,
+      "hardware_motor_index": 5,
+      "isaaclab_index": 17,
+      "joint": "left_ankle_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.2618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.2618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 279
+        },
+        "effort_limit_sim": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 278
+        }
+      },
+      "mujoco_xml_actuator_index": 5,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 6,
+      "hardware_motor_index": 6,
+      "isaaclab_index": 1,
+      "joint": "right_hip_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.5307,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.8798,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 6,
+      "acceleration_rad_s2": null,
+      "differences": [
+        "velocity",
+        "effort"
+      ]
+    },
+    {
+      "body_dq_index": 7,
+      "hardware_motor_index": 7,
+      "isaaclab_index": 4,
+      "joint": "right_hip_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.9671,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.5236,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 7,
+      "acceleration_rad_s2": null,
+      "differences": [
+        "velocity",
+        "effort"
+      ]
+    },
+    {
+      "body_dq_index": 8,
+      "hardware_motor_index": 8,
+      "isaaclab_index": 7,
+      "joint": "right_hip_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.7576,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.7576,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 8,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 9,
+      "hardware_motor_index": 9,
+      "isaaclab_index": 10,
+      "joint": "right_knee_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.087267,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.8798,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 20.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 252
+        },
+        "effort_limit_sim": {
+          "value": 139.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 246
+        }
+      },
+      "mujoco_xml_actuator_index": 9,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 10,
+      "hardware_motor_index": 10,
+      "isaaclab_index": 14,
+      "joint": "right_ankle_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.87267,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.5236,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 279
+        },
+        "effort_limit_sim": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 278
+        }
+      },
+      "mujoco_xml_actuator_index": 10,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 11,
+      "hardware_motor_index": 11,
+      "isaaclab_index": 18,
+      "joint": "right_ankle_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.2618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.2618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 279
+        },
+        "effort_limit_sim": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 278
+        }
+      },
+      "mujoco_xml_actuator_index": 11,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 12,
+      "hardware_motor_index": 12,
+      "isaaclab_index": 2,
+      "joint": "waist_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 88.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 32.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 295
+        },
+        "effort_limit_sim": {
+          "value": 88,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 294
+        }
+      },
+      "mujoco_xml_actuator_index": 12,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 13,
+      "hardware_motor_index": 13,
+      "isaaclab_index": 5,
+      "joint": "waist_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.52,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.52,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 287
+        },
+        "effort_limit_sim": {
+          "value": 50,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 286
+        }
+      },
+      "mujoco_xml_actuator_index": 13,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 14,
+      "hardware_motor_index": 14,
+      "isaaclab_index": 8,
+      "joint": "waist_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -0.52,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 0.52,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 50.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 287
+        },
+        "effort_limit_sim": {
+          "value": 50,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 286
+        }
+      },
+      "mujoco_xml_actuator_index": 14,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 15,
+      "hardware_motor_index": 15,
+      "isaaclab_index": 11,
+      "joint": "left_shoulder_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -3.0892,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.6704,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 15,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 16,
+      "hardware_motor_index": 16,
+      "isaaclab_index": 15,
+      "joint": "left_shoulder_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.5882,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.2515,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 16,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 17,
+      "hardware_motor_index": 17,
+      "isaaclab_index": 19,
+      "joint": "left_shoulder_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 17,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 18,
+      "hardware_motor_index": 18,
+      "isaaclab_index": 21,
+      "joint": "left_elbow_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.0472,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.0944,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 18,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 19,
+      "hardware_motor_index": 19,
+      "isaaclab_index": 23,
+      "joint": "left_wrist_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.972222054,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.972222054,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 19,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 20,
+      "hardware_motor_index": 20,
+      "isaaclab_index": 25,
+      "joint": "left_wrist_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 20,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 21,
+      "hardware_motor_index": 21,
+      "isaaclab_index": 27,
+      "joint": "left_wrist_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 21,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 22,
+      "hardware_motor_index": 22,
+      "isaaclab_index": 12,
+      "joint": "right_shoulder_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -3.0892,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.6704,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 29,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 23,
+      "hardware_motor_index": 23,
+      "isaaclab_index": 16,
+      "joint": "right_shoulder_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.2515,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.5882,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 30,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 24,
+      "hardware_motor_index": 24,
+      "isaaclab_index": 20,
+      "joint": "right_shoulder_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.618,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 31,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 25,
+      "hardware_motor_index": 25,
+      "isaaclab_index": 22,
+      "joint": "right_elbow_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.0472,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 2.0944,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 32,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 26,
+      "hardware_motor_index": 26,
+      "isaaclab_index": 24,
+      "joint": "right_wrist_roll_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.972222054,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.972222054,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 37.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 25.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 33,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 27,
+      "hardware_motor_index": 27,
+      "isaaclab_index": 26,
+      "joint": "right_wrist_pitch_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 34,
+      "acceleration_rad_s2": null,
+      "differences": []
+    },
+    {
+      "body_dq_index": 28,
+      "hardware_motor_index": 28,
+      "isaaclab_index": 28,
+      "joint": "right_wrist_yaw_joint",
+      "values": {
+        "motor_pos_lower_limit_list": {
+          "value": -1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 220
+        },
+        "motor_pos_upper_limit_list": {
+          "value": 1.61443,
+          "unit": "rad",
+          "source": "yaml",
+          "line": 227
+        },
+        "motor_vel_limit_list": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "yaml",
+          "line": 234
+        },
+        "motor_effort_limit_list": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "yaml",
+          "line": 241
+        },
+        "velocity_limit_sim": {
+          "value": 22.0,
+          "unit": "rad/s",
+          "source": "isaaclab",
+          "line": 320
+        },
+        "effort_limit_sim": {
+          "value": 5.0,
+          "unit": "N*m",
+          "source": "isaaclab",
+          "line": 311
+        }
+      },
+      "mujoco_xml_actuator_index": 35,
+      "acceleration_rad_s2": null,
+      "differences": []
+    }
+  ]
+}

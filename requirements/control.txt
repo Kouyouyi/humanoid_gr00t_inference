@@ -1,0 +1,11 @@
+# Installed control dependency versions; Unitree SDK source is vendored.
+numpy==1.26.4
+opencv-python-headless==4.11.0.86
+scipy==1.15.3
+pyzmq==27.0.1
+msgpack==1.1.0
+msgpack-numpy==0.4.8
+tyro==0.9.17
+pin==2.7.0
+cyclonedds==0.10.2
+rich==14.3.3

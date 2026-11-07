@@ -1,0 +1,9 @@
+{
+  "external_paths": {
+    "backbone_path": "/absolute/path/to/Cosmos-Reason2-2B",
+    "rtc_python": "/absolute/path/to/model-env/bin/python",
+    "data_python": "/absolute/path/to/control-env/bin/python",
+    "inference_python": "/absolute/path/to/control-env/bin/python",
+    "telemetry_python": "/absolute/path/to/control-env/bin/python"
+  }
+}

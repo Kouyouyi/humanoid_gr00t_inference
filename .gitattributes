@@ -1,0 +1,9 @@
+*.npz filter=lfs diff=lfs merge=lfs -text
+native/bin/g1_field filter=lfs diff=lfs merge=lfs -text
+native/lib/*.so* filter=lfs diff=lfs merge=lfs -text
+native/lib/*.a filter=lfs diff=lfs merge=lfs -text
+native/thirdparty/**/*.a filter=lfs diff=lfs merge=lfs -text
+native/thirdparty/**/*.so* filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.stl filter=lfs diff=lfs merge=lfs -text
+*.trt filter=lfs diff=lfs merge=lfs -text

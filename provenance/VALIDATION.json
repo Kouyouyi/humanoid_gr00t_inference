@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "unit_tests": 30,
+  "hardware_started": false,
+  "gpu_weights_loaded": false,
+  "robot_channels_created": 0,
+  "standalone_checks": [
+    {
+      "part": "model",
+      "checks": [
+        "all application/control paths are inside checkout",
+        "GR00T policy/model/RTC/server imports"
+      ],
+      "application_modules_with_local_origin": 50
+    },
+    {
+      "part": "control",
+      "checks": [
+        "all application/control paths are inside checkout",
+        "SONIC observation/camera/session imports",
+        "Pinocchio robot model and meshes load",
+        "copied Unitree DDS SDK imports without initializing channels",
+        "native scripts + guarded unlimited owner snapshot prepare without starting processes",
+        "selected checkpoint BrainCo/SONIC layouts validate"
+      ],
+      "application_modules_with_local_origin": 166
+    }
+  ],
+  "native_dependencies_resolved": true,
+  "native_recipe_steps": 7,
+  "native_recipe_references_external_projects": false,
+  "caveat": "Uses installed Python third-party packages and system SDKs; local interpreter/backbone settings are ignored. No fresh-machine installation or physical robot acceptance was performed."
+}

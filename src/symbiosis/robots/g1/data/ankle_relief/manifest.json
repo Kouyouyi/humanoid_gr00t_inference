@@ -1,0 +1,23 @@
+{
+  "left": {
+    "episode": 13,
+    "sha256": "79c6cb08390ef6365e60e40d61bea05f880ace80775330273708c229eb32f0e7",
+    "source_parquet_sha256": "9d11465e21e489df60053b48de6c353420d3addc54539350726f96609b65b22c",
+    "delta_gain": 1.5
+  },
+  "right": {
+    "episode": 15,
+    "sha256": "0a8b2ee58003eb3fad24d809775ee2762930c683008e803b90f22736c3aec735",
+    "source_parquet_sha256": "83fc8ceef6d12c537ffe50d9deed602f8d0e3cbf28e7456ed87292d56a5f7fe0",
+    "delta_gain": 1.5
+  },
+  "validation": {
+    "simulation": [
+      "E092",
+      "E094"
+    ],
+    "real_run": "E096",
+    "operator_report": "2026-10-18: function works well; retain for future deployments",
+    "quantitative_cooling_validated": false
+  }
+}

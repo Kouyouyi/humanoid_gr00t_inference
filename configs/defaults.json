@@ -1,0 +1,20 @@
+{
+  "external_paths": {
+    "artifact_root": "runtime",
+    "rtc_root": "vendor/rtc",
+    "sonic_root": "vendor/sonic",
+    "native_build": "native/bin",
+    "native_env": "native/env.sh",
+    "native_workdir": ".",
+    "controller_assets": "assets/controller",
+    "controller_planner": "assets/controller/planner_sonic.onnx",
+    "controller_reference": "assets/reference",
+    "robot_model_assets": "assets/robot_model/g1",
+    "rtc_python": "@python",
+    "data_python": "@python",
+    "inference_python": "@python",
+    "telemetry_python": "@python",
+    "vla_model": "models/default",
+    "backbone_path": "models/Cosmos-Reason2-2B"
+  }
+}

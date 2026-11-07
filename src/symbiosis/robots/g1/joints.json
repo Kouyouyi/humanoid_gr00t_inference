@@ -1,0 +1,210 @@
+{
+  "source": "/home/user/code/HumanoidHarnessDeploy/configs/g1_reference_limits.json",
+  "source_sha256": "24a506add027da01c1eccbf07397e6082558ff91c78e167f0dde94bc972fdd45",
+  "hardware_validated": false,
+  "joints": [
+    {
+      "name": "left_hip_pitch_joint",
+      "hardware_index": 0,
+      "isaac_index": 0,
+      "lower": -2.5307,
+      "upper": 2.8798
+    },
+    {
+      "name": "right_hip_pitch_joint",
+      "hardware_index": 6,
+      "isaac_index": 1,
+      "lower": -2.5307,
+      "upper": 2.8798
+    },
+    {
+      "name": "waist_yaw_joint",
+      "hardware_index": 12,
+      "isaac_index": 2,
+      "lower": -2.618,
+      "upper": 2.618
+    },
+    {
+      "name": "left_hip_roll_joint",
+      "hardware_index": 1,
+      "isaac_index": 3,
+      "lower": -0.5236,
+      "upper": 2.9671
+    },
+    {
+      "name": "right_hip_roll_joint",
+      "hardware_index": 7,
+      "isaac_index": 4,
+      "lower": -2.9671,
+      "upper": 0.5236
+    },
+    {
+      "name": "waist_roll_joint",
+      "hardware_index": 13,
+      "isaac_index": 5,
+      "lower": -0.52,
+      "upper": 0.52
+    },
+    {
+      "name": "left_hip_yaw_joint",
+      "hardware_index": 2,
+      "isaac_index": 6,
+      "lower": -2.7576,
+      "upper": 2.7576
+    },
+    {
+      "name": "right_hip_yaw_joint",
+      "hardware_index": 8,
+      "isaac_index": 7,
+      "lower": -2.7576,
+      "upper": 2.7576
+    },
+    {
+      "name": "waist_pitch_joint",
+      "hardware_index": 14,
+      "isaac_index": 8,
+      "lower": -0.52,
+      "upper": 0.52
+    },
+    {
+      "name": "left_knee_joint",
+      "hardware_index": 3,
+      "isaac_index": 9,
+      "lower": -0.087267,
+      "upper": 2.8798
+    },
+    {
+      "name": "right_knee_joint",
+      "hardware_index": 9,
+      "isaac_index": 10,
+      "lower": -0.087267,
+      "upper": 2.8798
+    },
+    {
+      "name": "left_shoulder_pitch_joint",
+      "hardware_index": 15,
+      "isaac_index": 11,
+      "lower": -3.0892,
+      "upper": 2.6704
+    },
+    {
+      "name": "right_shoulder_pitch_joint",
+      "hardware_index": 22,
+      "isaac_index": 12,
+      "lower": -3.0892,
+      "upper": 2.6704
+    },
+    {
+      "name": "left_ankle_pitch_joint",
+      "hardware_index": 4,
+      "isaac_index": 13,
+      "lower": -0.87267,
+      "upper": 0.5236
+    },
+    {
+      "name": "right_ankle_pitch_joint",
+      "hardware_index": 10,
+      "isaac_index": 14,
+      "lower": -0.87267,
+      "upper": 0.5236
+    },
+    {
+      "name": "left_shoulder_roll_joint",
+      "hardware_index": 16,
+      "isaac_index": 15,
+      "lower": -1.5882,
+      "upper": 2.2515
+    },
+    {
+      "name": "right_shoulder_roll_joint",
+      "hardware_index": 23,
+      "isaac_index": 16,
+      "lower": -2.2515,
+      "upper": 1.5882
+    },
+    {
+      "name": "left_ankle_roll_joint",
+      "hardware_index": 5,
+      "isaac_index": 17,
+      "lower": -0.2618,
+      "upper": 0.2618
+    },
+    {
+      "name": "right_ankle_roll_joint",
+      "hardware_index": 11,
+      "isaac_index": 18,
+      "lower": -0.2618,
+      "upper": 0.2618
+    },
+    {
+      "name": "left_shoulder_yaw_joint",
+      "hardware_index": 17,
+      "isaac_index": 19,
+      "lower": -2.618,
+      "upper": 2.618
+    },
+    {
+      "name": "right_shoulder_yaw_joint",
+      "hardware_index": 24,
+      "isaac_index": 20,
+      "lower": -2.618,
+      "upper": 2.618
+    },
+    {
+      "name": "left_elbow_joint",
+      "hardware_index": 18,
+      "isaac_index": 21,
+      "lower": -1.0472,
+      "upper": 2.0944
+    },
+    {
+      "name": "right_elbow_joint",
+      "hardware_index": 25,
+      "isaac_index": 22,
+      "lower": -1.0472,
+      "upper": 2.0944
+    },
+    {
+      "name": "left_wrist_roll_joint",
+      "hardware_index": 19,
+      "isaac_index": 23,
+      "lower": -1.972222054,
+      "upper": 1.972222054
+    },
+    {
+      "name": "right_wrist_roll_joint",
+      "hardware_index": 26,
+      "isaac_index": 24,
+      "lower": -1.972222054,
+      "upper": 1.972222054
+    },
+    {
+      "name": "left_wrist_pitch_joint",
+      "hardware_index": 20,
+      "isaac_index": 25,
+      "lower": -1.61443,
+      "upper": 1.61443
+    },
+    {
+      "name": "right_wrist_pitch_joint",
+      "hardware_index": 27,
+      "isaac_index": 26,
+      "lower": -1.61443,
+      "upper": 1.61443
+    },
+    {
+      "name": "left_wrist_yaw_joint",
+      "hardware_index": 21,
+      "isaac_index": 27,
+      "lower": -1.61443,
+      "upper": 1.61443
+    },
+    {
+      "name": "right_wrist_yaw_joint",
+      "hardware_index": 28,
+      "isaac_index": 28,
+      "lower": -1.61443,
+      "upper": 1.61443
+    }
+  ]
+}
